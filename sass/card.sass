@@ -1,0 +1,153 @@
+@import "normalizes.scss"
+@import "resets.scss"
+@import "style.sass"
+@import "about.sass"
+
+
+
+.webinar-iner-start-section
+    margin-bottom: 64px
+    
+
+
+.webinar-iner-main-section
+    li
+        list-style-type: disc
+    &__speakers
+        margin: 0 auto
+        max-width: 864px
+        .teachers-section
+            &__teacher
+                flex: 0 1 48%
+            &__name
+                bottom: 0%
+                color: white
+    &__speakers-cards
+        display: flex
+        flex-wrap: wrap
+        gap: 24px
+    &__information
+        margin-bottom: 60px
+    &__title
+        margin-bottom: 40px
+    &__card
+        .event-card
+            &__hashtag
+                bottom: 0
+    &__date
+        color: $color-blue
+        font-size: 1.25em
+        margin-bottom: 32px
+        font-weight: 400
+    &__subtitle
+        color: $color-black
+        font-size: 1.5em
+        margin-bottom: 16px
+        font-weight: 500
+    &__container
+        display: flex
+        flex-direction: column
+    &__card-text
+        font-size: 1.125em
+        margin-bottom: 32px
+        font-weight: 300
+
+    &__price
+        font-size: 1.25em
+        margin-bottom: 115px
+        font-weight: 500
+
+        span
+            color: $color-blue
+            font-weight: 400
+
+    &__information
+        gap: 24px
+        display: flex
+    &__card
+        img
+            width: 100%
+        min-height: 600px
+
+        border: 0
+        flex: 1 0 48%
+    &__text
+        flex: 0 0 48%
+    &__about
+        max-width: 866px
+        margin: 0 auto
+        flex: 0 1 50%
+        .webinar-iner-main-section__subtitle
+            margin-bottom: 1.5em
+        .webinar-iner-main-section__card-text
+            margin-bottom: 24px
+            &:last-child
+                margin-bottom: 0px
+    &__module
+        margin: 0 auto
+
+    &__get
+        margin: 0 auto
+        .webinar-iner-main-section__card-text
+            margin: 0
+        ul
+            margin-left: 20px
+            line-height: 30px
+    &__speakers-subtitle
+        margin-bottom: 24px
+    &__launch
+        border-radius: 24px
+        padding: 60px 121px
+        display: flex
+        flex-direction: column
+        align-items: center
+        background-color: $color-blue
+        max-width: 866px
+        margin: 0 auto
+        margin-bottom: 180px
+    &__events
+        display: flex
+        flex-direction: column
+        margin-bottom: 180px  
+        .second-section__soon-events
+            .to-button
+                justify-self: center
+    &__launch-title
+        color: white
+        font-size: 2em
+        margin-bottom: 24px
+    &__launch-text
+        text-align: center
+        color: white
+        font-size: 1.125em
+        font-weight: 300
+        opacity: 0.8
+        margin-bottom: 40px
+    &__launch-events
+        background-color: white
+        a
+            color: $color-blue
+            margin-right: 21px
+
+
+.gray-block
+    max-width: 866px
+    border-radius:  24px
+    background-color: #F9F9F9
+    padding: 40px
+    margin-bottom: 60px
+
+.question-section
+    &__accordions
+        min-height: 560px
+        width: 100%
+        justify-content: space-between
+        .accordion-item
+            border: 0
+            background-color: rgb(217, 235, 255)
+        .accordion-button
+            padding: 22px
+            color: black
+            background-color: rgb(217, 235, 255)
+    &__title
+        font-size: 1.5em

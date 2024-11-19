@@ -1,0 +1,304 @@
+@import "normalizes.scss"
+@import "resets.scss"
+@import "style.sass"
+
+
+
+body
+    padding-top: 20px
+.icon
+    &__text
+        color: $color-blue
+    &__img
+        fill: $color-blue
+    svg
+        margin-right: 13px
+
+.nav-menu
+    a
+        color: $color-black
+    button
+        color: white
+        background-color: $color-blue
+
+.more-info
+    &__circle
+        border-color: $color-black
+    &__text
+        color: $color-black
+
+.about-start-section
+    overflow: hidden
+    position: relative
+    &__title
+        margin-bottom: 40px
+    &__header
+        margin-bottom: 64px
+    &__text-image
+        display: flex
+        justify-content: space-between
+    &__info
+        display: flex
+        flex-direction: column
+        justify-content: space-between 
+        background-color: #f9f9f9
+        border-radius: 24px
+        padding: 40px
+        margin-right: 40px
+        width: 50%
+    &__subtitle
+        margin-bottom: 16px
+        font-weight: 500
+        font-size: 1.5em
+    &__subtext
+        color: $color-black
+    &__background-svg
+        position: absolute
+        z-index: 0
+        right: -10%
+        bottom: -5%
+    &__image
+        object-fit: cover
+        img
+            width: 100%
+
+.about-second-section
+    &__container
+        padding: 180px 0px
+    position: relative
+    overflow: hidden
+    &__background-svg
+        position: absolute
+        z-index: 0
+        right: -29%
+        bottom: -28%
+    display: flex
+    &__title
+        margin-bottom: 60px
+    &__note
+        display: flex
+        flex-direction: column
+        justify-content: space-between  
+        width: 533px
+        h3
+            font-size: 4em
+            color: $color-blue
+            font-weight: 500
+        p
+            font-weight: 300
+            font-size: 1.5em
+        &:first-child
+            margin-left: 220px
+        &:last-child
+            margin-right: 221px
+    &__notion
+        display: flex
+        align-items: center
+        justify-content: center
+        flex-wrap: wrap
+        gap: 50px
+
+
+.about-third-section
+    margin-bottom: 179px
+    &__content
+        background-color: #D9EBFF
+        border-radius: 24px
+        padding: 40px
+    &__title
+        margin-bottom: 60px
+    &__blocks
+        justify-content: center
+
+.blocks
+    gap: 24px
+    display: flex
+    &__block
+        padding: 24px
+        border-radius: 24px
+        background-color: $color-blue
+        flex: 1 1 33%
+        h3
+            color: white
+            font-weight: 500
+            font-size: 1.25em
+            margin-bottom: 16px
+        p
+            color: white
+            font-weight: 300
+            font-size: 1.125em
+            opacity: 80%
+
+
+.teachers-section
+    &__container
+        min-height: 824px
+        display: flex
+        flex-direction: column
+        justify-content: space-around
+    &__teacher
+        position: relative
+        flex: 1 1 25%
+        img
+            width: 100%
+            height: 100%
+            border-radius: 24px
+
+    &__name
+        position: absolute
+        z-index: 1
+        background-color: $color-blue
+        left: 0
+        bottom: -10%
+        padding: 24px
+        width: 100%
+        border-radius: 24px
+        font-size: 1.25em
+    &__title-buttons
+        display: flex
+        justify-content: space-between
+    &__buttons
+        display: flex
+        gap: 40px
+    &__circle-prev
+        width: 4em
+        height: 4em
+        border: 1px solid rgb(0, 122, 255)
+        transform: rotate(90deg)
+    &__circle-next
+        width: 4em
+        height: 4em
+        border: 1px solid rgb(0, 122, 255)
+        transform: rotate(-90deg)
+    &__carousel
+        min-height: 523px
+        .carousel-item.active
+            
+
+        .carousel-item
+            justify-content: space-between
+            display: flex
+            flex-direction: row
+            gap: 24px
+
+        .carousel-inner
+            overflow: visible
+            margin-bottom: 100px
+            
+
+    button
+        display: block
+        position: relative
+        width: auto
+        
+
+
+.carousel-indicators [data-bs-target] 
+    width: 16px
+    height: 16px
+    border-radius: 50%
+    background: rgb(217, 235, 255)
+    border-top: 0
+    border-bottom: 0
+
+
+.graduates-section
+    margin-bottom: 180px
+    &__title
+        margin-bottom: 60px
+
+.carousel-indicators .active 
+    background: #007AFF
+
+.carousel-indicators 
+    position: relative
+
+
+
+.logoss
+    overflow: hidden
+    white-space: nowrap
+    position: relative
+    &__slide 
+        display: inline-flex
+        justify-content: start
+        white-space: nowrap
+        animation: 35s slide infinite linear
+        gap: 24px
+    &__item
+        display: flex
+        align-items: center
+        justify-content: center
+        width: 264px
+        height: 264px
+        background-color: #F9F9F9
+
+
+@keyframes slide 
+  from 
+    transform: translateX(0)
+  to 
+    transform: translateX(-100%)
+  
+
+.graduates-scetion
+    margin-bottom: 180px
+
+
+form 
+    border-radius: 24px
+    background-color: $color-blue
+    .col
+        padding: 8px
+        input, textarea
+            height: 72px
+            border-radius: 16px
+        textarea
+            padding: 24px
+            margin-bottom: 32px
+    
+#inputDescr
+    height: 144px
+
+
+.form__submit
+    background-color: rgb(24, 22, 59)
+    border-radius: 300px   
+    display: flex
+    justify-content: center
+    align-items: center
+    padding: 20px 32px
+
+.input-section
+    &__image
+        max-height: 720px
+        max-width: 533px
+        border-radius: 25px
+
+    &__form
+        max-width: 1312px
+        margin: 0 auto
+        min-height: 800px
+        padding: 40px
+        margin-bottom: 180px
+        display: flex
+        justify-content: space-between
+    &__title
+        margin-bottom: 60px
+        font-size: 3em
+
+
+
+
+
+@media (min-width: 1800px)
+    .container
+        max-width: 1700px
+    body
+        font-size: 1.3em
+
+@media (min-width: 2000px)
+    .container
+        max-width: 1900px
+    body
+        font-size: 1.4em

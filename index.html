@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/bootstrap-grid.min.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <title>Платформа соціальних змін</title>
+</head>
+
+<body>
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <h2 class="modal-title">Вхід</h2>
+        <input type="email" id="exampleFormControlInput1" placeholder="E-mail">
+        <div class="password-container">
+          <input type="text" class="inputPassword" id="inputPassword" placeholder="Пароль">
+          <span class="toggle-password" onclick="togglePassword()">
+            <svg width="22" height="20" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M9.74294 3.09232C10.1494 3.03223 10.5686 3 11.0004 3C16.1054 3 19.4553 7.50484 20.5807 9.28682C20.7169 9.5025 20.785 9.61034 20.8231 9.77667C20.8518 9.90159 20.8517 10.0987 20.8231 10.2236C20.7849 10.3899 20.7164 10.4985 20.5792 10.7156C20.2793 11.1901 19.8222 11.8571 19.2165 12.5805M5.72432 4.71504C3.56225 6.1817 2.09445 8.21938 1.42111 9.28528C1.28428 9.50187 1.21587 9.61016 1.17774 9.77648C1.1491 9.9014 1.14909 10.0984 1.17771 10.2234C1.21583 10.3897 1.28393 10.4975 1.42013 10.7132C2.54554 12.4952 5.89541 17 11.0004 17C13.0588 17 14.8319 16.2676 16.2888 15.2766M2.00042 1L20.0004 19M8.8791 7.87868C8.3362 8.42157 8.00042 9.17157 8.00042 10C8.00042 11.6569 9.34356 13 11.0004 13C11.8288 13 12.5788 12.6642 13.1217 12.1213"
+                stroke="#007AFF" style="stroke:#007AFF;stroke:color(display-p3 0.0000 0.4784 1.0000);stroke-opacity:1;"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </span>
+        </div>
+        <button class="sign_in modal-sign_in">Увійти</button>
+        <div class="modal-or">
+          <hr class="modal-line">
+          <p>або</p>
+          <hr class="modal-line">
+        </div>
+        <div class="social-login-buttons">
+          <button class="social-button google">
+            <svg width="24.000000" height="24.000000" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink">
+              <clipPath id="clip403_13230">
+                <rect id="Social icon" rx="0.000000" width="23.500000" height="23.500000"
+                  transform="translate(0.250000 0.250000)" fill="white" fill-opacity="0" />
+              </clipPath>
+              <rect rx="0.000000" width="23.500000" height="23.500000" transform="translate(0.250000 0.250000)"
+                fill="#FFFFFF" fill-opacity="0" />
+              <g clip-path="url(#clip403_13230)">
+                <path
+                  d="M23.76 12.27C23.76 11.46 23.7 10.64 23.55 9.83L12.24 9.83L12.24 14.45L18.72 14.45C18.45 15.94 17.58 17.26 16.32 18.1L16.32 21.1L20.18 21.1C22.46 19.01 23.76 15.92 23.76 12.27Z"
+                  fill="#4285F4" fill-opacity="1.000000" fill-rule="nonzero" />
+                <path
+                  d="M12.24 24C15.47 24 18.2 22.93 20.19 21.1L16.32 18.1C15.25 18.83 13.86 19.25 12.24 19.25C9.11 19.25 6.45 17.13 5.5 14.3L1.51 14.3L1.51 17.39C3.55 21.44 7.7 24 12.24 24Z"
+                  fill="#34A853" fill-opacity="1.000000" fill-rule="nonzero" />
+                <path
+                  d="M5.5 14.3C4.99 12.8 4.99 11.19 5.5 9.7L5.5 6.61L1.51 6.61C-0.19 10 -0.19 14 1.51 17.39L5.5 14.3Z"
+                  fill="#FBBC04" fill-opacity="1.000000" fill-rule="nonzero" />
+                <path
+                  d="M12.24 4.74C13.95 4.72 15.6 5.36 16.84 6.54L20.26 3.12C18.1 1.08 15.22 -0.04 12.24 0C7.7 0 3.55 2.55 1.51 6.61L5.5 9.7C6.45 6.86 9.1 4.74 12.24 4.74Z"
+                  fill="#EA4335" fill-opacity="1.000000" fill-rule="nonzero" />
+              </g>
+            </svg>
+            Вхід через Google
+          </button>
+          <button class="social-button facebook">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g clip-path="url(#clip0_403_13233)">
+                <path
+                  d="M24 12C24 5.37258 18.6274 0 12 0C5.37258 0 0 5.37258 0 12C0 17.9895 4.3882 22.954 10.125 23.8542V15.4688H7.07812V12H10.125V9.35625C10.125 6.34875 11.9166 4.6875 14.6576 4.6875C15.9701 4.6875 17.3438 4.92188 17.3438 4.92188V7.875H15.8306C14.34 7.875 13.875 8.80008 13.875 9.75V12H17.2031L16.6711 15.4688H13.875V23.8542C19.6118 22.954 24 17.9895 24 12Z"
+                  fill="#1877F2" style="fill:#1877F2;fill:color(display-p3 0.0941 0.4667 0.9490);fill-opacity:1;" />
+                <path
+                  d="M16.6711 15.4688L17.2031 12H13.875V9.75C13.875 8.80102 14.34 7.875 15.8306 7.875H17.3438V4.92188C17.3438 4.92188 15.9705 4.6875 14.6576 4.6875C11.9166 4.6875 10.125 6.34875 10.125 9.35625V12H7.07812V15.4688H10.125V23.8542C11.3674 24.0486 12.6326 24.0486 13.875 23.8542V15.4688H16.6711Z"
+                  fill="white" style="fill:white;fill-opacity:1;" />
+              </g>
+              <defs>
+                <clipPath id="clip0_403_13233">
+                  <rect width="24" height="24" fill="white" style="fill:white;fill-opacity:1;" />
+                </clipPath>
+              </defs>
+            </svg>
+            Вхід через Facebook
+          </button>
+        </div>
+        <p class="modal-to-registration">У вас ще немає аккаунта?
+          <button class="registration" data-bs-toggle="modal"
+            data-bs-target="#RegistrationModal">Зареєструватися</button>
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="RegistrationModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <h2 class="modal-title">Реєстрація</h2>
+        <div class="social-login-buttons">
+          <button class="social-button google">
+            <svg width="24.000000" height="24.000000" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink">
+              <clipPath id="clip403_13230">
+                <rect id="Social icon" rx="0.000000" width="23.500000" height="23.500000"
+                  transform="translate(0.250000 0.250000)" fill="white" fill-opacity="0" />
+              </clipPath>
+              <rect rx="0.000000" width="23.500000" height="23.500000" transform="translate(0.250000 0.250000)"
+                fill="#FFFFFF" fill-opacity="0" />
+              <g clip-path="url(#clip403_13230)">
+                <path
+                  d="M23.76 12.27C23.76 11.46 23.7 10.64 23.55 9.83L12.24 9.83L12.24 14.45L18.72 14.45C18.45 15.94 17.58 17.26 16.32 18.1L16.32 21.1L20.18 21.1C22.46 19.01 23.76 15.92 23.76 12.27Z"
+                  fill="#4285F4" fill-opacity="1.000000" fill-rule="nonzero" />
+                <path
+                  d="M12.24 24C15.47 24 18.2 22.93 20.19 21.1L16.32 18.1C15.25 18.83 13.86 19.25 12.24 19.25C9.11 19.25 6.45 17.13 5.5 14.3L1.51 14.3L1.51 17.39C3.55 21.44 7.7 24 12.24 24Z"
+                  fill="#34A853" fill-opacity="1.000000" fill-rule="nonzero" />
+                <path
+                  d="M5.5 14.3C4.99 12.8 4.99 11.19 5.5 9.7L5.5 6.61L1.51 6.61C-0.19 10 -0.19 14 1.51 17.39L5.5 14.3Z"
+                  fill="#FBBC04" fill-opacity="1.000000" fill-rule="nonzero" />
+                <path
+                  d="M12.24 4.74C13.95 4.72 15.6 5.36 16.84 6.54L20.26 3.12C18.1 1.08 15.22 -0.04 12.24 0C7.7 0 3.55 2.55 1.51 6.61L5.5 9.7C6.45 6.86 9.1 4.74 12.24 4.74Z"
+                  fill="#EA4335" fill-opacity="1.000000" fill-rule="nonzero" />
+              </g>
+            </svg>
+            Вхід через Google
+          </button>
+          <button class="social-button facebook">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g clip-path="url(#clip0_403_13233)">
+                <path
+                  d="M24 12C24 5.37258 18.6274 0 12 0C5.37258 0 0 5.37258 0 12C0 17.9895 4.3882 22.954 10.125 23.8542V15.4688H7.07812V12H10.125V9.35625C10.125 6.34875 11.9166 4.6875 14.6576 4.6875C15.9701 4.6875 17.3438 4.92188 17.3438 4.92188V7.875H15.8306C14.34 7.875 13.875 8.80008 13.875 9.75V12H17.2031L16.6711 15.4688H13.875V23.8542C19.6118 22.954 24 17.9895 24 12Z"
+                  fill="#1877F2" style="fill:#1877F2;fill:color(display-p3 0.0941 0.4667 0.9490);fill-opacity:1;" />
+                <path
+                  d="M16.6711 15.4688L17.2031 12H13.875V9.75C13.875 8.80102 14.34 7.875 15.8306 7.875H17.3438V4.92188C17.3438 4.92188 15.9705 4.6875 14.6576 4.6875C11.9166 4.6875 10.125 6.34875 10.125 9.35625V12H7.07812V15.4688H10.125V23.8542C11.3674 24.0486 12.6326 24.0486 13.875 23.8542V15.4688H16.6711Z"
+                  fill="white" style="fill:white;fill-opacity:1;" />
+              </g>
+              <defs>
+                <clipPath id="clip0_403_13233">
+                  <rect width="24" height="24" fill="white" style="fill:white;fill-opacity:1;" />
+                </clipPath>
+              </defs>
+            </svg>
+            Вхід через Facebook
+          </button>
+        </div>
+        <div class="modal-or">
+          <hr class="modal-line">
+          <p>або</p>
+          <hr class="modal-line">
+        </div>
+        <input type="text" id="inputName" placeholder="І'мя">
+        <input type="text" id="inputSurname" placeholder="Прізвище">
+        <input type="tel" id="inputNumber" placeholder="Телефон" pattern="^\+380\s\(\d{2}\)\s\d{3}-\d{2}-\d{2}$">
+        <input type="email" id="exampleFormControlInput2" placeholder="E-mail">
+
+
+        <div class="password-container">
+          <input type="password" class="inputPassword" id="inputPassword2" placeholder="Пароль">
+          <span class="toggle-password" onclick="togglePassword()">
+            <svg width="22" height="20" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M9.74294 3.09232C10.1494 3.03223 10.5686 3 11.0004 3C16.1054 3 19.4553 7.50484 20.5807 9.28682C20.7169 9.5025 20.785 9.61034 20.8231 9.77667C20.8518 9.90159 20.8517 10.0987 20.8231 10.2236C20.7849 10.3899 20.7164 10.4985 20.5792 10.7156C20.2793 11.1901 19.8222 11.8571 19.2165 12.5805M5.72432 4.71504C3.56225 6.1817 2.09445 8.21938 1.42111 9.28528C1.28428 9.50187 1.21587 9.61016 1.17774 9.77648C1.1491 9.9014 1.14909 10.0984 1.17771 10.2234C1.21583 10.3897 1.28393 10.4975 1.42013 10.7132C2.54554 12.4952 5.89541 17 11.0004 17C13.0588 17 14.8319 16.2676 16.2888 15.2766M2.00042 1L20.0004 19M8.8791 7.87868C8.3362 8.42157 8.00042 9.17157 8.00042 10C8.00042 11.6569 9.34356 13 11.0004 13C11.8288 13 12.5788 12.6642 13.1217 12.1213"
+                stroke="#007AFF" style="stroke:#007AFF;stroke:color(display-p3 0.0000 0.4784 1.0000);stroke-opacity:1;"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </span>
+        </div>
+        <div class="password-container">
+          <input type="password" class="inputPassword" id="confirmPassword" aria-describedby="passwordHelpBlock"
+            placeholder="Підтвердіть пароль">
+          <span class="toggle-password" onclick="togglePassword()">
+            <svg width="22" height="20" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M9.74294 3.09232C10.1494 3.03223 10.5686 3 11.0004 3C16.1054 3 19.4553 7.50484 20.5807 9.28682C20.7169 9.5025 20.785 9.61034 20.8231 9.77667C20.8518 9.90159 20.8517 10.0987 20.8231 10.2236C20.7849 10.3899 20.7164 10.4985 20.5792 10.7156C20.2793 11.1901 19.8222 11.8571 19.2165 12.5805M5.72432 4.71504C3.56225 6.1817 2.09445 8.21938 1.42111 9.28528C1.28428 9.50187 1.21587 9.61016 1.17774 9.77648C1.1491 9.9014 1.14909 10.0984 1.17771 10.2234C1.21583 10.3897 1.28393 10.4975 1.42013 10.7132C2.54554 12.4952 5.89541 17 11.0004 17C13.0588 17 14.8319 16.2676 16.2888 15.2766M2.00042 1L20.0004 19M8.8791 7.87868C8.3362 8.42157 8.00042 9.17157 8.00042 10C8.00042 11.6569 9.34356 13 11.0004 13C11.8288 13 12.5788 12.6642 13.1217 12.1213"
+                stroke="#007AFF" style="stroke:#007AFF;stroke:color(display-p3 0.0000 0.4784 1.0000);stroke-opacity:1;"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </span>
+        </div>
+
+
+        <label>
+          <input class="real-checkbox" type="checkbox" id="confirmDog">
+          <span class="custom-checkbox"></span>
+          Я примаю <a href="confident.html"> Договір публічної оферти</a>
+        </label>
+
+        <button class="sign_in modal-sign_in">Зареєструватися</button>
+        <p class="modal-to-registration">У вас є аккаунт?
+          <button class="registration" data-bs-toggle="modal" data-bs-target="#exampleModal">Увійти</button>
+        </p>
+      </div>
+    </div>
+  </div>
+  <section class="start-section blue-block">
+    <svg class="start-section__backround-svg" width="1300" height="752" viewBox="0 0 1300 752" fill="none"
+      xmlns="http://www.w3.org/2000/svg">
+      <path opacity="0.2"
+        d="M1249.01 233.496C1175.14 133.907 1045.46 92.2497 928.36 132.881C716.187 206.497 508.403 451.746 362.256 578.659C314.952 619.741 256.789 646.983 194.54 653.936C-203.538 698.427 65.0782 -113.616 603.875 -40.3168C695.622 -27.8359 767.173 47.2416 774.32 139.62C774.534 142.402 774.726 145.229 774.881 148.1C785.178 335.462 802.616 489.566 825.143 614.773C1015.62 1673.38 1570.06 666.336 1249.01 233.503V233.496Z"
+        stroke="white" style="stroke:white;stroke-opacity:1;" stroke-width="7" stroke-miterlimit="10" />
+    </svg>
+    <div class="container start-section__container">
+      <header class="start-section__header header">
+        <a class="start-section__icon icon" href="index.html"><img class="icon__img" src="icons/Vector (2).svg" alt="">
+          <p class="icon__text">Платформа <br> Соціальних <br> Змін</p>
+        </a>
+        <nav class="start__nav nav-menu">
+          <ul class="nav-menu__list">
+            <li class="nav-menu__list-item"><a href="calendar.html">Календар</a></li>
+            <li class="nav-menu__list-item"><a href="courses.html">Курси</a></li>
+            <li class="nav-menu__list-item"><a href="webinars.html">Вебінари</a></li>
+            <li class="nav-menu__list-item"><a href="about.html">Про академію</a></li>
+            <li class="nav-menu__list-item"><a href="contacts.html">Контакти</a></li>
+            <li class="nav-menu__list-item">
+              <button class="sign_in" data-bs-toggle="modal" data-bs-target="#exampleModal">Увійти</button>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <div class="start-section__text">
+        <h2 class="start-section__title title_white">
+          Академія соціального <br>підприємства
+        </h2>
+        <div class="start-section__p">
+          Єдиний в Україні майданчик, де соціальні підприємці, представники організацій громадянського суспільства та
+          бізнесу обмінюються знаннями і досвідом.
+        </div>
+      </div>
+      <div class="start-section__more-info more-info">
+        <div class="more-info__circle circle">
+          <a href=""><img src="img/Arrow, Download, Save, Upload.svg" alt="" srcset=""></a>
+        </div>
+        <p class="more-info__text">Дізнатися більше</p>
+      </div>
+    </div>
+  </section>
+  <section class="second-section">
+    <div class="second-section__container container">
+      <h2 class="second-section__title title-black">
+        СКОРО ВІДБУДЕТЬСЯ
+      </h2>
+      <div class="second-section__soon-events">
+        <div class="event-card">
+          <div class="event-card__top">
+            <div class="event-card__course">
+              <p>КУРС</p>
+            </div>
+            <div class="event-card__online">
+              <div class="event-card__dot dot dot_green"></div>
+              <p>ОНЛАЙН</p>
+            </div>
+          </div>
+          <div class="event-card__bottom">
+            <div class="event-card__hashtag grom">
+              <p>#громадський сектор</p>
+            </div>
+          </div>
+          <a class="event-card__subtext" href="card.html">
+            <p class="event-card__date">початок - 14 березня 2024</p>
+            <h3 class="event-card__course-title">Дуже цікавий курс тут</h3>
+            <p class="event-card__description">Короткий опис</p>
+          </a>
+        </div>
+        <div class="event-card">
+          <div class="event-card__top">
+            <div class="event-card__course">
+              <p>ВЕБІНАР</p>
+            </div>
+            <div class="event-card__online">
+              <div class="event-card__dot dot dot_green"></div>
+              <p>ОНЛАЙН</p>
+            </div>
+          </div>
+          <div class="event-card__bottom">
+            <div class="event-card__hashtag bus">
+              <p>#бізнес</p>
+            </div>
+          </div>
+          <a class="event-card__subtext" href="card.html">
+            <p class="event-card__date">початок - 14 березня 2024</p>
+            <h3 class="event-card__course-title">Дуже цікавий курс тут</h3>
+            <p class="event-card__description">Короткий опис</p>
+          </a>
+        </div>
+        <div class="event-card">
+          <div class="event-card__top">
+            <div class="event-card__course">
+              <p>ВЕБІНАР</p>
+            </div>
+            <div class="event-card__online">
+              <div class="event-card__dot dot dot_red"></div>
+              <p>ОФЛАЙН</p>
+            </div>
+          </div>
+          <div class="event-card__bottom">
+            <div class="event-card__hashtag rel">
+              <p>#релігійні організації</p>
+            </div>
+          </div>
+          <a class="event-card__subtext" href="card.html">
+            <p class="event-card__date">початок - 14 березня 2024</p>
+            <h3 class="event-card__course-title">Дуже цікавий курс тут</h3>
+            <p class="event-card__description">Короткий опис</p>
+          </a>
+        </div>
+      </div>
+
+      <div class="second-section__to-events to-button">
+        <a href="">
+          Переглянути календар подій
+        </a>
+        <img class="to-button__arrow" src="img/Arrow, Download, Save, Upload.svg" alt="" srcset="">
+      </div>
+    </div>
+  </section>
+  <section class="third-section blue-block">
+    <div class="third-section__container container">
+      <h2 class="third-section__title title_white">ОБИРАЙТЕ ЗРУЧНИЙ ФОРМАТ НАВЧАННЯ</h2>
+      <div class="third-section__course-vebinars course-vebinars">
+        <div class="course-vebinars__course-vebinar">
+          <div class="course-vebinars__number">01</div>
+          <h2 class="course-vebinars__title">Онлайн-курси</h2>
+          <div class="course-vebinars__button to-button">
+            <a href="">
+              Перейти до онлайн-курсів
+            </a>
+            <img class="to-button__arrow" src="img/Arrow, Download, Save, Upload.svg" alt="" srcset="">
+          </div>
+        </div>
+        <div class="course-vebinars__course-vebinar">
+          <div class="course-vebinars__number">02</div>
+          <h2 class="course-vebinars__title">Вебінари</h2>
+          <div class="course-vebinars__button to-button">
+            <a href="">
+              Перейти до вебінарів
+            </a>
+            <img class="to-button__arrow" src="img/Arrow, Download, Save, Upload.svg" alt="" srcset="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="fourth-section">
+    <div class="fourth-section__container container">
+      <svg class="fourth-section__background" width="1507.041016" height="1264.575806" viewBox="0 0 1507.04 1264.58"
+        fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <desc>
+          Created with Pixso.
+        </desc>
+        <defs />
+        <g opacity="0.100000">
+          <path id="Vector"
+            d="M471.1 1062.76C708.07 980.69 940.13 707.31 1103.35 565.83C1156.18 520.04 1221.15 489.67 1290.66 481.92C1735.27 432.34 1435.26 1337.54 833.5 1255.82C731.04 1241.92 651.12 1158.23 643.14 1055.25C642.9 1052.15 642.69 1049 642.52 1045.8C631.02 836.94 611.54 665.16 586.38 525.59C373.65 -654.45 -245.58 468.12 112.98 950.6C195.48 1061.62 340.32 1108.05 471.1 1062.76Z"
+            stroke="#007CFF" stroke-opacity="1.000000" stroke-width="7.000000" stroke-linejoin="round" />
+        </g>
+      </svg>
+
+      <h2 class="fourth-section__title title-black">МИ НАВЧАЄМО - ЗМІНЮЄШ ТИ!</h2>
+      <div class="fourth-section__notion">
+        <div class="fourth-section__note note">
+          <p>Усі ваші нотатки в одному місці</p>
+        </div>
+        <div class="fourth-section__note note">
+          <p>Тести, що допомагають перевірити знання</p>
+        </div>
+        <div class="fourth-section__note note">
+          <p>Платформа запам’ятовує місце, де ви зупинилися</p>
+        </div>
+        <div class="fourth-section__note note">
+          <p>Спілкування з лекторами наживо </p>
+        </div>
+        <div class="fourth-section__note note">
+          <p>Доступ із будь-якого пристрою</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="question-section blue-block">
+    <div class="question-section__container container">
+      <h2 class="question-section__title title_white">ПОШИРЕНІ ЗАПИТАННЯ</h2>
+      <div class="question-section__accordions">
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              Яка вартість курсів? 
+            </button>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              ...
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              Чи отримаю я сертифікат після завершення навчання?
+            </button>
+          </h2>
+          <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              ...
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+              Я завершив(ла) курс. Як отримати сертифікат?
+            </button>
+          </h2>
+          <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              ...
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseFourth" aria-expanded="false" aria-controls="collapseThree">
+              Я намагаюсь зареєструватися, але лист для верифікації поштової скриньки не приходить. Що робити?
+            </button>
+          </h2>
+          <div id="collapseFourth" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              ...
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#fifth"
+              aria-expanded="false" aria-controls="collapseThree">
+              Чи буде запис зустрічей?
+            </button>
+          </h2>
+          <div id="fifth" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              ....
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sixth"
+              aria-expanded="false" aria-controls="collapseThree">
+              Чи свідчить отриманий сертифікат
+              про підвищення кваліфікації?
+            </button>
+          </h2>
+          <div id="sixth" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              ....
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#seventh"
+              aria-expanded="false" aria-controls="collapseThree">
+              Як зареєструватись на курс чи вебінар?
+            </button>
+          </h2>
+          <div id="seventh" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              ....
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#eight"
+              aria-expanded="false" aria-controls="collapseThree">
+              Куди додавати домашнє завдання?
+            </button>
+          </h2>
+          <div id="eight" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              ...
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#nineth"
+              aria-expanded="false" aria-controls="collapseThree">
+              На які навчальні програми я можу зареєструватись?
+            </button>
+          </h2>
+          <div id="nineth" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              ...
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ten"
+              aria-expanded="false" aria-controls="collapseThree">
+              Як довго у доступі будуть курси та вебінари?
+            </button>
+          </h2>
+          <div id="ten" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              ...
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#eleven"
+              aria-expanded="false" aria-controls="collapseThree">
+              Що означає “закритий” курс?
+              (це про ті, які ми створюємо під конкретну групу людей)
+            </button>
+          </h2>
+          <div id="eleven" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              ...
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h2 class="question-section__subtitle title_white">Не знайшли відповідь <br> на своє запитання?</h2>
+      <p class="question-section__text-us">Напишіть нам</p>
+      <div class="question-section__mail">
+        <p>
+          Ihor.dmytryshyn@social-change.com.ua
+        </p>
+      </div>
+    </div>
+  </section>
+  <footer class="footer-main footer">
+    <div class="footer__container container">
+      <div class="footer__topics">
+        <a href="courses.html">Курси</a>
+        <a href="webinars.html">Вебінари</a>
+        <a href="about.html">Про академію</a>
+        <a href="contacts.html">Контакти</a>
+      </div>
+      <div class="footer__info">
+        <div class="footer__number-mail">
+          <p>+38 (044) 232 83 99</p>
+          <p>info@social-change.com.ua</p>
+        </div>
+        <div class="footer__socials">
+          <a href="" class="footer__social"><img src="icons/facebook.svg" alt=""></a>
+          <a href="" class="footer__social"><img src="icons/insta.svg" alt=""></a>
+          <a href="" class="footer__social"><img src="icons/linkedin.svg" alt=""></a>
+          <a href="" class="footer__social"><img src="icons/tg.svg" alt=""></a>
+        </div>
+        <div class="footer__icon icon">
+          <img class="icon__img" src="icons/Vector (2).svg" alt="">
+          <p class="icon__text">Платформа <br> Соціальних <br> Змін</p>
+        </div>
+      </div>
+      <div class="footer__copyright">
+        <p>© 2024 Платформа Соціальних Змін. Всі права захищені.</p>
+        <a href="confident.html">Політика конфіденційності</a>
+      </div>
+    </div>
+  </footer>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/passwordChanger.js"></script>
+</body>
+
+</html>

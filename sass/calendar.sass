@@ -1,0 +1,197 @@
+@import "normalizes.scss"
+@import "resets.scss"
+@import "style.sass"
+@import "about.sass"
+
+
+.calendar-start-section
+    margin-bottom: 64px
+
+.calendar-section
+    margin-bottom: 64px
+
+    &__title
+        margin-bottom: 64px
+
+.calendar-header 
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding: 20px
+    background-color: #fff
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1)
+  
+  
+.filters input 
+    margin-right: 5px
+
+.togle-icon
+    width: 56px
+    height: 32px
+    padding: 0 16px
+    background-color: white
+    display: flex
+    align-items: center
+    border-radius: 12px
+    border: 0
+    transition: 1s all
+    &.active
+        background-color: $color-blue
+        svg path 
+            stroke: #FFFFFF
+
+.calendar 
+    margin: 0 auto
+    border-radius: 10px
+    &__calendar
+
+    &__toggle
+        display: flex
+        gap: 16px
+    &__type-events
+        margin-right: 16px
+    &__events
+        display: flex
+        align-items: center
+        label
+            margin-right: 12px
+    &__manage
+        padding: 20px 24px
+        background-color: rgb(249, 249, 249)
+        margin-bottom: 24px
+        display: flex
+        justify-content: space-between
+        align-items: center
+    &-nav
+        display: flex
+        align-items: center
+        gap: 12px
+        button
+            text-align: center
+            border: 0
+            background: none  
+    &-days
+        display: grid
+        grid-template-columns: repeat(7, 1fr)
+        text-align: center
+        font-weight: bold
+        background-color: rgb(217, 235, 255)
+        div
+            padding: 10px 0
+            border-right: 1px solid rgba(24, 22, 59, 0.04)
+            &:first-child
+                border-left: 1px solid rgba(24, 22, 59, 0.04)
+                
+    &-grid
+        display: grid
+        grid-template-columns: repeat(7, 1fr)
+        gap: 1px
+        background-color: #ddd
+        border: 1px solid rgb(217, 235, 255)
+        div
+            background-color: white
+            padding: 15px
+            min-height: 194px
+            cursor: pointer
+            display: flex
+            flex-direction: column
+            justify-content: space-between
+            position: relative
+            span.event
+                color: black
+                padding: 2px 5px
+                font-size: 12px
+                margin-top: 5px
+            span.event.bus 
+                background: none
+                border-left: 3px solid #FFBA00
+            span.event.rel 
+                background: none
+                border-left: 3px solid rgb(138, 64, 255)
+            span.event.grom 
+                background: none
+                border-left: 3px solid #E76337
+
+
+.calendar-grid div.prev-month,
+.calendar-grid div.next-month 
+  background-color: #f0f0f0
+  color: #999
+
+
+.calendar-grid div.prev-month:hover,
+.calendar-grid div.next-month:hover 
+  cursor: not-allowed
+
+body
+    font-family: UkraineHead
+
+.popover
+    font-family: UkraineHead
+    width: 360px
+    &-body
+        padding: 0
+        padding: 24px
+
+.custom-popover
+    font-family: UkraineHead
+    &__kind
+        position: relative
+        margin-bottom: 24px
+    &__body
+        padding: 0
+    &__date
+        color: rgb(0, 122, 255)
+        font-size: 1em
+        margin-bottom: 12px
+    &__title
+        font-size: 1.25em
+        margin-bottom: 40px
+    &__btn
+        padding: 12px 24px
+        justify-content: flex-start
+        a
+            font-size: 1.125em
+            padding: 0
+        img
+            margin-left: 12px
+    &__header
+        margin: 0
+        margin-bottom: 40px
+    &__course
+        font-size: 0.875em
+    &__online
+        font-size: 0.875em
+    &__hashtag
+        position: relative
+        display: inline-block
+        padding: 8px 16px
+        border-radius: 8px
+        p
+            font-size: 0.875em
+            color: white
+    &__text
+        opacity: 0.8
+        font-size: 1.125em
+        color: rgb(24, 22, 59)
+        margin-bottom: 32px
+
+.event-list
+    align-items: flex-start
+    gap: 80px
+    &__card
+        border: 1px solid rgba(24, 22, 59, 0.2)
+        width: 100%
+        border-radius: 24px
+        padding: 24px
+        margin-bottom: 24px
+
+    .custom-popover__hashtag
+        margin-right: 12px
+
+    &__left
+        flex: 0 0 60%
+    &__right
+        .event-card
+            max-width: none
+        flex: 1 1 48%
